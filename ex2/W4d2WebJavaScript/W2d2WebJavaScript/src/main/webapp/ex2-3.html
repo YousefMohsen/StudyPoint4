@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .myDiv{width: 25px; height: 25px; background-color: black;color: white; margin:3px; float: left;}
+        </style>
+    </head>
+    <body>
+        <h1 id="txt" >0</h1>
+        <div id="outer">
+         <div id ="1" class="myDiv">1</div>
+         <div id ="2" class="myDiv">2</div>
+         <div id ="3" class="myDiv">3</div>
+         <div id ="4" class="myDiv">4</div>
+         <div id ="5" class="myDiv">5</div>
+         <div id ="6" class="myDiv">6</div>
+         <div id ="7" class="myDiv">7</div>
+         <div id ="8" class="myDiv">8</div>
+         <div id ="9" class="myDiv">9</div>
+         <div id ="10" class="myDiv">10</div>
+         </div>
+        <script>
+            
+            
+ // a  )         
+ 
+//var divs = document.getElementsByClassName("myDiv");
+//divs[0].addEventListener("click",colorf); 
+//divs[1].addEventListener("click",colorf); 
+
+//b)
+var outer = document.getElementById("outer");
+outer.addEventListener("click",colorf);
+
+
+function colorf(evt){
+    var realDiv = evt.target;
+  console.log("Hi from "+realDiv.id );//print selected number to consol
+  
+  document.getElementById("txt").innerHTML = realDiv.id; //ex3
+ 
+ 
+
+}
+        </script>
+    </body>
+</html>

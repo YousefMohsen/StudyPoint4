@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <div id="d1" style="width: 25px; height: 25px;"> </div>
+        <div id="d2" style="width: 25px; height: 25px;"> </div>
+        <div id="d3" style="width: 25px; height: 25px;"> </div>
+
+        <button id="btn">Color divs</button>
+        <script>
+            
+            
+            
+            //all divs color set to blue
+         var divs =   document.getElementsByTagName("div");
+         
+         for (var i = 0; i < divs.length; i++) {
+             divs[i].style.backgroundColor = "blue";
+                }
+            
+            //button that changes divs color
+            var btn = document.getElementById("btn");
+            btn.addEventListener("click",clickHander);
+             
+            function clickHander(evt){
+                
+               divs[0].style.backgroundColor = "red";
+               divs[1].style.backgroundColor = "yellow";
+               divs[2].style.backgroundColor = "green";
+                
+                
+            }
+            
+
+
+
+        </script>
+    </body>
+</html>

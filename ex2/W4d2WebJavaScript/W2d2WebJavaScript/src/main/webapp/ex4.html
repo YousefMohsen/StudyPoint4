@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    </head>
+    <body>
+        <div>Ex4</div>
+          <div id="x" ></div>
+          
+            <input type="text" id="nn" ><button id="Addbtn">Add</button>
+            
+            <button id="RFbtn">Remove first</button>
+            <button id="RLbtn">Remove last</button>
+
+      
+        
+     
+        
+        <script>
+   var names = ["Janus","HejJanus","Januuss"];   
+    
+    function listMaker(arr){
+      var lis = arr.map(function(name){
+          
+          return "<li>"+name+"</li>";
+      }) ; 
+    
+
+    return "<ul>"+lis.join("")+"</ul>";;
+    }
+    
+    
+    var table = document.getElementById("x");
+    table.innerHTML = listMaker(names);
+    
+      
+    // button & input
+    var Addbtn = document.getElementById("Addbtn");
+    Addbtn.addEventListener("click",function(evt){
+       // evt.preventDefault;
+   var input =  document.getElementById("nn").value;
+   names.push(input);
+   table.innerHTML = listMaker(names);
+   
+    });
+    
+    var RFbtn = document.getElementById("RFbtn");
+    var RLbtn = document.getElementById("RLbtn");
+    
+ RFbtn.addEventListener("click",function(evt){
+   names.shift();
+   table.innerHTML = listMaker(names);
+     });
+     
+ RLbtn.addEventListener("click",function(evt){
+       names.pop();
+       table.innerHTML = listMaker(names);
+     });
+     
+     
+     
+            
+        </script>
+    </body>
+</html>
